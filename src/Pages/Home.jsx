@@ -1,16 +1,24 @@
-import { useEffect } from "react"
-export const Home = ({loadMovies}) => {
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-    useEffect(() => {
+export const Home = ({ loadTrendingsMovies, movies, loadMovieDetails }) => {
+  useEffect(() => {
+    loadTrendingsMovies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-        let movies = loadMovies()
-
-        console.log(movies)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, []);
-    return (
-        <div>
-            <p>Home-page</p>
-        </div>
-    )
-}
+  return (
+    <div>
+      <p>Home-page</p>
+      <ul>
+        {movies.map(movie => {
+          return (
+            <li key={movie.id}>
+              <Link to={`movie/${movie.id}`}>{movie.original_title}</Link>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
