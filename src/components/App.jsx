@@ -1,9 +1,8 @@
-import {
-  fetchTrendingMovies,
-  fetchMovieDetails,
-} from 'fetching/fetchingMovies';
+import { fetchTrendingMovies } from 'fetching/fetchingMovies';
+
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
 import { SharedLayout } from './SharedLayout';
 import { Home } from 'Pages/Home';
 import { Movies } from 'Pages/Movies';
@@ -14,8 +13,6 @@ import { Cast } from './Cast';
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
-  const [movie, setMovie] = useState([]);
-  const [search, setSearch] = useState('');
 
   const loadTrendingsMovies = () => {
     fetchTrendingMovies()

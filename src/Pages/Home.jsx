@@ -14,7 +14,7 @@ export const Home = ({ loadTrendingsMovies, movies, loadMovieDetails }) => {
         {movies.map(movie => {
           return (
             <li key={movie.id}>
-              <Link to={`movie/${movie.id}`}>{movie.original_title}</Link>
+              <Link to={`movie/${movie.id}`} state={{ from: "/"}}>{movie.original_title}</Link>
             </li>
           );
         })}
