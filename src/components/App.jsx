@@ -1,15 +1,16 @@
 import { fetchTrendingMovies } from 'fetching/fetchingMovies';
 
-import { useState } from 'react';
+import { useState, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { SharedLayout } from './SharedLayout';
-import { Home } from 'Pages/Home';
-import { Movies } from 'Pages/Movies';
-import { MoviesDetails } from 'Pages/MoviesDetails';
-import { Review } from './Review';
-import { NotFound } from './NotFound';
-import { Cast } from './Cast';
+
+const Home = lazy(() => import('../Pages/Home'));
+const Movies = lazy(() => import('../Pages/Movies'));
+const MoviesDetails = lazy(() => import('../Pages/MoviesDetails'));
+const Review = lazy(() => import('./Review'));
+const Cast = lazy(() => import('./Cast'));
+const NotFound = lazy(() => import('./NotFound'));
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
