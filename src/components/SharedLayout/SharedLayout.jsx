@@ -1,5 +1,4 @@
 import { Outlet, NavLink } from 'react-router-dom';
-import { Header, Link, Container } from '../App.stylled';
 import { Suspense } from 'react';
 import css from './SharedLayout.module.css'
 
