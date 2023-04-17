@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { fetchQueryMovie } from 'fetching/fetchingMovies';
 import { Link } from 'react-router-dom';
 
-export const Movies = () => {
+const Movie = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [queryMovies, setQueryMovies] = useState(null);
@@ -59,3 +59,5 @@ export const Movies = () => {
     </div>
   );
 };
+
+export default Movie;

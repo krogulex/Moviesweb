@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieDetails } from 'fetching/fetchingMovies';
 
-export const Cast = () => {
+const Cast = () => {
   const { id } = useParams();
   const [cast, setCast] = useState(null);
 
@@ -23,7 +23,7 @@ export const Cast = () => {
   return (
     <div>
       {!cast || cast.length === 0 ? (
-        <p>There are no Cast.</p>
+        <div></div>
       ) : (
         <div>
           <h2>Cast</h2>
@@ -59,3 +59,5 @@ export const Cast = () => {
     </div>
   );
 };
+
+export default Cast;

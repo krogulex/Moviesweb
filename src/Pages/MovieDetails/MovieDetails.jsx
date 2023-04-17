@@ -1,17 +1,15 @@
 import { fetchMovieDetails } from 'fetching/fetchingMovies';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Outlet } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
-import { BackLink } from 'components/BackLink';
+import { BackLink } from 'components/BackLink/BackLink';
 
-export const MoviesDetails = () => {
+const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? "/";
-  console.log(location.state)
+  const backLinkHref = location.state?.from ?? '/';
+  console.log(location.state);
 
   useEffect(() => {
     loadMovieDetails(id);
@@ -29,9 +27,9 @@ export const MoviesDetails = () => {
 
   return (
     <div>
-          <BackLink to={backLinkHref}>Back to products</BackLink>
+      <BackLink to={backLinkHref}>Back to products</BackLink>
       {!movie ? (
-        <p>Movies not found</p>
+        <div></div>
       ) : (
         <div>
           <div>
@@ -80,3 +78,5 @@ export const MoviesDetails = () => {
     </div>
   );
 };
+
+export default MovieDetails;

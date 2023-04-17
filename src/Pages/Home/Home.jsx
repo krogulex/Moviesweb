@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export const Home = ({ loadTrendingsMovies, movies, loadMovieDetails }) => {
+const Home = ({ loadTrendingsMovies, movies, loadMovieDetails }) => {
   useEffect(() => {
     loadTrendingsMovies();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -14,7 +14,9 @@ export const Home = ({ loadTrendingsMovies, movies, loadMovieDetails }) => {
         {movies.map(movie => {
           return (
             <li key={movie.id}>
-              <Link to={`movie/${movie.id}`} state={{ from: "/"}}>{movie.original_title}</Link>
+              <Link to={`movie/${movie.id}`} state={{ from: '/' }}>
+                {movie.original_title}
+              </Link>
             </li>
           );
         })}
@@ -22,3 +24,4 @@ export const Home = ({ loadTrendingsMovies, movies, loadMovieDetails }) => {
     </div>
   );
 };
+export default Home;

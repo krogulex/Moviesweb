@@ -3,14 +3,21 @@ import { fetchTrendingMovies } from 'fetching/fetchingMovies';
 import { useState, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { SharedLayout } from './SharedLayout';
+import { SharedLayout } from './SharedLayout/SharedLayout';
+/* 
+import { Home } from 'Pages/Home/Home';
+import { Movies } from 'Pages/Movie/Movie';
+import { MoviesDetails } from 'Pages/MovieDetails/MovieDetails';
+import { Review } from './Review/Review';
+import { Cast } from './Cast/Cast';
+import { NotFound } from './NotFound/NotFound'; */
 
-const Home = lazy(() => import('../Pages/Home'));
-const Movies = lazy(() => import('../Pages/Movies'));
-const MoviesDetails = lazy(() => import('../Pages/MoviesDetails'));
-const Review = lazy(() => import('./Review'));
-const Cast = lazy(() => import('./Cast'));
-const NotFound = lazy(() => import('./NotFound'));
+const Home = lazy(() => import('../Pages/Home/Home'));
+const Movie = lazy(() => import('../Pages/Movie/Movie'));
+const MovieDetails = lazy(() => import('../Pages/MovieDetails/MovieDetails'));
+const Review = lazy(() => import('./Review/Review'));
+const Cast = lazy(() => import('./Cast/Cast'));
+const NotFound = lazy(() => import('./NotFound/NotFound')); 
 
 export const App = () => {
   const [movies, setMovies] = useState([]);
@@ -45,8 +52,8 @@ export const App = () => {
               />
             }
           />
-          <Route path="movie" element={<Movies />} />
-          <Route path="movie/:id" element={<MoviesDetails />}>
+          <Route path="movie" element={<Movie />} />
+          <Route path="movie/:id" element={<MovieDetails />}>
             <Route path="cast" element={<Cast />} />
             <Route path="review" element={<Review />} />
           </Route>
