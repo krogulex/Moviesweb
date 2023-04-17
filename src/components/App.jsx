@@ -12,11 +12,11 @@ import { Review } from './Review/Review';
 import { Cast } from './Cast/Cast';
 import { NotFound } from './NotFound/NotFound'; */
 
-const Home = lazy(() => import('../Pages/Home/Home'));
-const Movie = lazy(() => import('../Pages/Movie/Movie'));
-const MovieDetails = lazy(() => import('../Pages/MovieDetails/MovieDetails'));
-const Review = lazy(() => import('./Review/Review'));
-const Cast = lazy(() => import('./Cast/Cast'));
+const Home = lazy(async () => await import('../Pages/Home/Home'));
+const Movie = lazy(async () => await import('../Pages/Movie/Movie'));
+const MovieDetails = lazy(async () => await import('../Pages/MovieDetails/MovieDetails'));
+const Review = lazy(async () => await import('./Review/Review'));
+const Cast = lazy(async () => await import('./Cast/Cast'));
 const NotFound = lazy(() => import('./NotFound/NotFound')); 
 
 export const App = () => {
