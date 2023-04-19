@@ -9,7 +9,6 @@ const MovieDetails = () => {
 
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
-  console.log(location.state);
 
   useEffect(() => {
     loadMovieDetails(id);

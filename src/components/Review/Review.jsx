@@ -32,7 +32,7 @@ const Review = () => {
               return (
                 <li key={review.id}>
                   <h5>Author: {review.author}</h5>
-                  <p>{review.content}</p>
+                  <div dangerouslySetInnerHTML={{__html:review.content}} />
                 </li>
               );
             })}
