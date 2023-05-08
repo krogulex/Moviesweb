@@ -1,0 +1,36 @@
+.movies__container {
+  width: 100%;
+  text-align: center;
+}
+
+.movie__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.movie__card {
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: rgb(205, 202, 202);
+  border-radius: 1rem;
+  position: relative;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+.movie__img {
+  width: 100%;
+}
+.movie__overlay {
+  width: 100%;
+  height: 100px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+.home-slogan {
+  color: var(--tertiary-color);
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
