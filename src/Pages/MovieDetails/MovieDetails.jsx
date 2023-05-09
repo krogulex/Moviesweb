@@ -3,6 +3,10 @@ import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { BackLink } from 'components/BackLink/BackLink';
 
+import noImage from '../../images/no-image.jpg';
+import Cast from 'components/Cast/Cast';
+import Review from 'components/Review/Review';
+
 const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
@@ -25,27 +29,21 @@ const MovieDetails = () => {
   };
 
   return (
-    <div>
+    <div className='movie-details__all'>
       <BackLink to={backLinkHref}>Back to products</BackLink>
       {!movie ? (
         <div></div>
       ) : (
-        <div>
-          <div>
+        <div className='movie-details__content'>
+          <div className="movie-details__poster">
             {movie.poster_path ? (
               <img
-                className="img"
+                className="movie-details__posters"
                 src={'https://image.tmdb.org/t/p/w500' + movie.poster_path}
-                alt="No images"
+                alt="..."
               ></img>
             ) : (
-              <img
-                className="cast-img"
-                src={
-                  'https://joadre.com/wp-content/uploads/2019/02/no-image.jpg'
-                }
-                alt="No images"
-              ></img>
+              <img className="cast-img" src={noImage} alt="..."></img>
             )}
           </div>
           <div>
@@ -55,22 +53,17 @@ const MovieDetails = () => {
             <p>User score: {Math.floor(movie.vote_average * 10)}%</p>
             <h3>Overview</h3>
             <p>{movie.overview}</p>
-            <h4>Genres</h4>
+            <h3>Genres</h3>
             <p>{movie.genres.map(genre => genre.name).join(', ')}</p>
           </div>
-          <hr></hr>
-          <div>
-            <h4>Additional Information</h4>
-            <ul>
-              <li>
-                <Link to={`cast`}>Cast</Link>
-              </li>
-              <li>
-                <Link to={`review`}>review</Link>
-              </li>
-            </ul>
+{/*           <div className='cast'>
+          <Link className='cast' to={`cast`}>Cast</Link>
           </div>
-          <hr></hr>
+          <div className='review'>
+          <Link className='review' to={`review`}>review</Link>
+          </div> */}
+          <Cast></Cast>
+          <Review></Review>
           <Outlet />
         </div>
       )}

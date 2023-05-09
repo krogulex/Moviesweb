@@ -20,6 +20,18 @@ const Review = () => {
       .catch(error => console.log(error));
   };
 
+  const handleClick = (id) => {
+    const text = document.getElementsByClassName(id)
+    console.log(text[1])
+    if (text[0].classList.contains("read-more")) {
+      text[0].classList.remove("read-more");
+      text[1].innerHTML= 'Read More'
+    } else {
+      text[0].classList.add("read-more");
+      text[1].innerHTML = 'Read Less'
+    }
+  }
+
   return (
     <div>
       <h2>Reviews</h2>
@@ -32,7 +44,9 @@ const Review = () => {
               return (
                 <li key={review.id}>
                   <h5>Author: {review.author}</h5>
-                  <div dangerouslySetInnerHTML={{__html:review.content}} />
+                  <h5>Rating: {review.author_details.rating}/10</h5>
+                  <div id={review.id} className={`review__text ${review.id}`} dangerouslySetInnerHTML={{__html:review.content}} />
+                  <button className={`review__button ${review.id}`} onClick={() => handleClick(review.id)}>Read more</button>
                 </li>
               );
             })}

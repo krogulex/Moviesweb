@@ -1,0 +1,35 @@
+.movie-details__content {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.movie-details__poster {
+    max-width: 300px;
+}
+
+.movie-details__poster img {
+    width: 100%;
+    box-shadow: 0px 2px 8px 0px #000;
+    border-radius: 10px;
+}
+
+.additional-info {
+    margin-right: auto;
+}
+
+/* .cast .review {
+    padding: 8px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.cast .review {
+    color: white;
+    background-color: #e1a126;
+} */

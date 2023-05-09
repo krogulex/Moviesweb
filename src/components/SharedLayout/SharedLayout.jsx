@@ -1,5 +1,6 @@
 import { Outlet, NavLink } from 'react-router-dom';
 import { Suspense } from 'react';
+import { DotLoader } from 'react-spinners';
 
 export const SharedLayout = () => {
   return (
@@ -32,7 +33,7 @@ export const SharedLayout = () => {
       </header>
       <div className="box"></div>
       <div className="outlet__container">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<DotLoader className='loader' color="#e1a126" />}>
           <Outlet />
         </Suspense>
       </div>

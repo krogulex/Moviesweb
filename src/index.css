@@ -1,10 +1,15 @@
 @import-normalize;
+
 /* bring in normalize.css styles */
 
 :root {
   --primary-color: #e1a126;
   --secondary-color: #000;
   --tertiary-color:#fff; 
+  --hover-color: #9e6b0b;
+}
+h3 {
+  font-weight: 500;
 }
 
 * {
@@ -35,6 +40,7 @@ code {
 
 ul {
   padding: 0;
+  list-style: none;
 }
 
 a {
@@ -45,10 +51,10 @@ button {
   background-color: var(--tertiary-color);
 }
 
-button:hover {
+/* button:hover {
   background-color: var(--primary-color);
   cursor: pointer;
-}
+} */
 
 form {
   margin-top: 15px;
@@ -63,4 +69,7 @@ form {
 
 /*import css */
 @import "/src/Pages/Home/Home.css";
-@import "/src/components/SharedLayout/SharedLayout.css"
+@import "/src/components/SharedLayout/SharedLayout.css";
+@import "/src/Pages//MovieDetails/MovieDetails.css";
+@import '/src/components/Cast/Cast.css';
+@import '/src/components/Review/Review.css';

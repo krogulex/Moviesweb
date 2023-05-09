@@ -1,0 +1,63 @@
+.cast {
+    background-color: #f6f6f6;
+    width: calc(100% + 32px);
+    padding: 0 16px;
+}
+
+.cast__content {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.cast__overlay {
+    height: 110px;
+}
+
+.swiper {
+    width: 100%;
+    width: 100%;
+    min-height: 0;
+    min-width: 0;
+}
+
+.mySwiper {
+    width: 100%;
+}
+
+.swiper-slide {
+    max-width: 100px;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.swiper-slide img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cast__name {
+    height: 50%;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 5px;
+}
+
+.cast__character {
+    color: #727272;
+    height: 50%;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 5px;
+}
