@@ -33,3 +33,10 @@
     color: white;
     background-color: #e1a126;
 } */
+.user-score {
+    display: flex;
+    align-items: center;
+}
+.user-score__icon {
+    margin-left: 5px;
+}

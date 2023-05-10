@@ -32,10 +32,15 @@ header {
     font-weight: 400;
     letter-spacing: 1px;
     margin: 0;
+    padding-top: 3px;
+    transition: all 400ms;
 }
 .name__container {
     display: flex;
     align-items: center;
+}
+.name:hover {
+    color: var(--primary-color);
 }
 .icon {
     display: inline-block;
@@ -55,11 +60,15 @@ header {
     text-decoration: none;
     font-weight: 500;
     color: #fff;
+    transition: all 400ms;
 }
 
 .nav__link .active {
     color: white;
-    background-color: #e1a126;
+    background-color: var(--primary-color);
+}
+.nav__link:hover {
+    background-color: var(--hover-color);
 }
 
 .box {
@@ -78,4 +87,10 @@ header {
 
 .loader {
     margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.name__icon {
+    height: 40px;
+    width: 40px;
 }

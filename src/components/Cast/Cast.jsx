@@ -31,7 +31,7 @@ const Cast = () => {
         <div>No cast</div>
       ) : (
           <div className="cast__content">
-            <h2>Cast</h2>
+            <h2>Cast - {cast.length}</h2>
             <Swiper
               slidesPerView={'auto'}
               spaceBetween={10}

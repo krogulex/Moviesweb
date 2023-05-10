@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchQueryMovie } from 'fetching/fetchingMovies';
 import { Link } from 'react-router-dom';
+import MovieList from 'components/MovieList/MovieList';
 
 const Movie = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -44,7 +45,9 @@ const Movie = () => {
         </form>
       </Wrapper>
       {queryMovies && (
-        <ul>
+
+        <MovieList movies={queryMovies} from={{from: '/movie'}} to={''}></MovieList>
+     /*    <ul>
           {queryMovies.map(movie => {
             return (
               <li key={movie.id}>
@@ -54,7 +57,7 @@ const Movie = () => {
               </li>
             );
           })}
-        </ul>
+        </ul> */
       )}
     </div>
   );

@@ -73,3 +73,11 @@ form {
 @import "/src/Pages//MovieDetails/MovieDetails.css";
 @import '/src/components/Cast/Cast.css';
 @import '/src/components/Review/Review.css';
+@import '/src/components/Footer/Footer.css';
+@import '/src/components/MovieList/MovieList.css';
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }}

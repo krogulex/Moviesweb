@@ -1,11 +1,14 @@
+.reviews {
+margin-right: auto;
+}
 .review__text {
-    height: 94px;
+    height: 50px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .read-more {
-    height: 100%;
+    height: auto;
 }
 
 .review__button {
@@ -23,4 +26,28 @@
 
 .review__button:hover {
     background-color: var(--hover-color);
+}
+
+.review__line {
+    margin-top: 20px;
+    border: 1px solid #000;
+}
+.review__user {
+    display: flex;
+    align-items: center;
+}
+.review__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    justify-content: center;
+}
+.review__item {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .review__item {
+        max-width: 48%;
+    }
 }
