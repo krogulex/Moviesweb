@@ -1,8 +1,7 @@
-import { Wrapper, Input, Icon } from 'components/App.stylled';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchQueryMovie } from 'fetching/fetchingMovies';
-import { Link } from 'react-router-dom';
+
 import MovieList from 'components/MovieList/MovieList';
 
 const Movie = () => {
@@ -35,19 +34,19 @@ const Movie = () => {
   };
 
   return (
-    <div>
-      <Wrapper>
-        <form onSubmit={handleSubmit}>
-          <Input type="text" name="input" />
-          <button type="submit">
-            <Icon />
-          </button>
+    <div className="movies__container">
+      <h1 className="home-slogan">Search for desired movie</h1>
+        <form className="search__form" onSubmit={handleSubmit}>
+          <input className='search__input' type="text" name="input" />
+          <button className='search__button'  type="submit">Search</button>
         </form>
-      </Wrapper>
       {queryMovies && (
-
-        <MovieList movies={queryMovies} from={{from: '/movie'}} to={''}></MovieList>
-     /*    <ul>
+        <MovieList
+          movies={queryMovies}
+          from={{ from: `/movie?query=${query}` }}
+          to={''}
+        ></MovieList>
+        /*    <ul>
           {queryMovies.map(movie => {
             return (
               <li key={movie.id}>

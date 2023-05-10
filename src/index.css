@@ -75,6 +75,7 @@ form {
 @import '/src/components/Review/Review.css';
 @import '/src/components/Footer/Footer.css';
 @import '/src/components/MovieList/MovieList.css';
+@import '/src/Pages/Movie/Movie.css';
 
 @media screen and (min-width: 768px) {
   body {

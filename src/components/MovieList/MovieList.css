@@ -18,6 +18,8 @@
   .movie__img {
     width: 100%;
     border-bottom: 1px solid #000;
+    height: 450px;
+    object-fit: cover;
   }
   .movie__overlay {
     width: 100%;

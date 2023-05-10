@@ -28,7 +28,10 @@ const Cast = () => {
   return (
     <div className="cast">
       {!cast || cast.length === 0 ? (
-        <div>No cast</div>
+       <div className="cast__content">
+        <h2>Cast</h2>
+        <p>No Cast yet...</p>
+        </div>
       ) : (
           <div className="cast__content">
             <h2>Cast - {cast.length}</h2>

@@ -15,7 +15,6 @@ const MovieDetails = () => {
 
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/';
-  console.log(backLinkHref.from)
 
   useEffect(() => {
     loadMovieDetails(id);
@@ -45,7 +44,7 @@ const MovieDetails = () => {
                 alt="..."
               ></img>
             ) : (
-              <img className="cast-img" src={noImage} alt="..."></img>
+              <img className="movie-details__posters" src={noImage} alt="..."></img>
             )}
           </div>
           <div>
@@ -59,7 +58,7 @@ const MovieDetails = () => {
               </svg>
             </p>
             <h3>Overview</h3>
-            <p>{movie.overview}</p>
+            <p>{movie.overview ? movie.overview : "No overview"}</p>
             <h3>Genres</h3>
             <p>{movie.genres.map(genre => genre.name).join(', ')}</p>
           </div>

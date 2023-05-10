@@ -18,11 +18,10 @@ const StyledLink = styled(Link)`
 `;
 
 export const BackLink = ({ to, from }) => {
-
   return (
     <StyledLink to={to}>
       <HiArrowLeft size="24" />
-      Back to {from.slice(1) === '' ? "Home" : from.slice(1) }
+      Back to {from.slice(1) === '' ? "Home" : from.slice(1, 6) }
     </StyledLink>
   );
 };
