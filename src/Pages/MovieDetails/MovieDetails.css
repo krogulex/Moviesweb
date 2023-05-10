@@ -30,3 +30,6 @@
 .user-score__icon {
     margin-left: 5px;
 }
+.movie-details__describe {
+    align-self: flex-start;
+}

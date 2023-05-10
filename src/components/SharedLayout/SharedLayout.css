@@ -70,7 +70,9 @@ header {
 .nav__link:hover {
     background-color: var(--hover-color);
 }
-
+.nav__link:not(:last-child) {
+    margin-right: 10px;
+}
 .box {
     height: 500px;
     background: rgb(2,0,36);

@@ -35,6 +35,7 @@ const Cast = () => {
       ) : (
           <div className="cast__content">
             <h2>Cast - {cast.length}</h2>
+            <p> {cast.length < 9 ? "" : "Swipe right to see more..."}</p>
             <Swiper
               slidesPerView={'auto'}
               spaceBetween={10}

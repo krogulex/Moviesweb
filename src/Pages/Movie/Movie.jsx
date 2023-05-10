@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { fetchQueryMovie } from 'fetching/fetchingMovies';
 
 import MovieList from 'components/MovieList/MovieList';
+import { Footer } from 'components/Footer/Footer';
 
 const Movie = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -36,27 +37,26 @@ const Movie = () => {
   return (
     <div className="movies__container">
       <h1 className="home-slogan">Search for desired movie</h1>
-        <form className="search__form" onSubmit={handleSubmit}>
-          <input className='search__input' type="text" name="input" />
-          <button className='search__button'  type="submit">Search</button>
-        </form>
+      <form className="search__form" onSubmit={handleSubmit}>
+        <input
+          className="search__input"
+          type="text"
+          name="input"
+          placeholder="Search..."
+        />
+        <button className="search__button" type="submit">
+          Search
+        </button>
+      </form>
       {queryMovies && (
-        <MovieList
-          movies={queryMovies}
-          from={{ from: `/movie?query=${query}` }}
-          to={''}
-        ></MovieList>
-        /*    <ul>
-          {queryMovies.map(movie => {
-            return (
-              <li key={movie.id}>
-                <Link to={`${movie.id}`} state={{ from: '/movie' }}>
-                  {movie.original_title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul> */
+        <div>
+          <MovieList
+            movies={queryMovies}
+            from={{ from: `/movie?query=${query}` }}
+            to={''}
+          ></MovieList>
+            <Footer></Footer>
+        </div>
       )}
     </div>
   );

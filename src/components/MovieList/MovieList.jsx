@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 
-
 import noImage from '../../images/no-image.jpg';
 
 const MovieList = ({ movies, from, to }) => {
   return (
-    <ul className="movie__list">
+          <ul className="movie__list">
       {movies.map(movie => {
         return (
           <li key={movie.id} className="movie__card">
@@ -27,6 +26,8 @@ const MovieList = ({ movies, from, to }) => {
         );
       })}
     </ul>
+
+    
   );
 };
 

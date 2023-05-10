@@ -31,7 +31,9 @@ const MovieDetails = () => {
   };
   return (
     <div className="movie-details__all">
-      <BackLink to={backLinkHref.from} from={backLinkHref.from}>Back to products</BackLink>
+      <BackLink to={backLinkHref.from} from={backLinkHref.from}>
+        Back to products
+      </BackLink>
       {!movie ? (
         <div></div>
       ) : (
@@ -44,23 +46,31 @@ const MovieDetails = () => {
                 alt="..."
               ></img>
             ) : (
-              <img className="movie-details__posters" src={noImage} alt="..."></img>
+              <img
+                className="movie-details__posters"
+                src={noImage}
+                alt="..."
+              ></img>
             )}
           </div>
-          <div>
+          <div className='movie-details__describe'>
             <h2>
               {movie.original_title} {movie.release_date.split('-')[0]}
             </h2>
-            <p className='user-score'>
-              User score: {Math.floor(movie.vote_average * 10)}% 
+            <p className="user-score">
+              User score: {Math.floor(movie.vote_average * 10)}%
               <svg className="icon user-score__icon">
                 <use href={`${icons}#icon-star`}></use>
               </svg>
             </p>
             <h3>Overview</h3>
-            <p>{movie.overview ? movie.overview : "No overview"}</p>
+            <p>{movie.overview ? movie.overview : 'No overview'}</p>
             <h3>Genres</h3>
-            <p>{movie.genres.map(genre => genre.name).join(', ')}</p>
+            <p>
+              {movie.genres
+                ? movie.genres.map(genre => genre.name).join(', ')
+                : 'No genres'}
+            </p>
           </div>
           <Cast></Cast>
           <Review></Review>

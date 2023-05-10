@@ -1,16 +1,19 @@
 .cast {
     background-color: #f6f6f6;
-    width: calc(100% + 32px);
+    width: 100vw;
     padding: 0 16px;
+    display: flex;
+    justify-content: center;
 }
 
 .cast__content {
+    max-width: 1024px;
     width: 100%;
     padding-bottom: 30px;
 }
 
 .cast__overlay {
-    height: 110px;
+    height: 125px;
 }
 
 .swiper {
@@ -61,4 +64,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 10px 5px;
+}
+
+@media screen and (min-width: 1024px) {
+.cast__content {
+    padding-left: 16px;
+    padding-right: 16px;
+}
 }
