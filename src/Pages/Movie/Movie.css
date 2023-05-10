@@ -33,3 +33,9 @@
   bottom: 0;
   top: auto;
 }
+.movies__not-found {
+  color: #fff;
+}
+.movie__div {
+  max-width: 1300px;
+}
