@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { Footer } from 'components/Footer/Footer';
 import MovieList from 'components/MovieList/MovieList';
 
-const Home = ({ loadTrendingsMovies, movies, loadMovieDetails }) => {
+const Home = ({ loadTrendingsMovies, movies }) => {
   useEffect(() => {
     loadTrendingsMovies();
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -58,7 +58,7 @@ const MovieDetails = () => {
               {movie.original_title} {movie.release_date.split('-')[0]}
             </h2>
             <p className="user-score">
-              User score: {Math.floor(movie.vote_average * 10)}%
+              User score: {Math.floor(movie.vote_average * 10) > 0 ? (`${Math.floor(movie.vote_average * 10)}%`) : 'N/A' }
               <svg className="icon user-score__icon">
                 <use href={`${icons}#icon-star`}></use>
               </svg>
