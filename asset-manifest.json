@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Movieweb/static/css/main.9bf416c3.css",
-    "main.js": "/Movieweb/static/js/main.8927710e.js",
+    "main.js": "/Movieweb/static/js/main.e74e96e8.js",
     "static/js/765.e45fd72f.chunk.js": "/Movieweb/static/js/765.e45fd72f.chunk.js",
     "static/js/816.2e3d515e.chunk.js": "/Movieweb/static/js/816.2e3d515e.chunk.js",
     "static/css/867.d444748e.chunk.css": "/Movieweb/static/css/867.d444748e.chunk.css",
@@ -16,7 +16,7 @@
     "index.html": "/Movieweb/index.html",
     "static/media/symbol-defs.svg": "/Movieweb/static/media/symbol-defs.f21fecae87a3e1155939234273e24680.svg",
     "main.9bf416c3.css.map": "/Movieweb/static/css/main.9bf416c3.css.map",
-    "main.8927710e.js.map": "/Movieweb/static/js/main.8927710e.js.map",
+    "main.e74e96e8.js.map": "/Movieweb/static/js/main.e74e96e8.js.map",
     "765.e45fd72f.chunk.js.map": "/Movieweb/static/js/765.e45fd72f.chunk.js.map",
     "816.2e3d515e.chunk.js.map": "/Movieweb/static/js/816.2e3d515e.chunk.js.map",
     "867.d444748e.chunk.css.map": "/Movieweb/static/css/867.d444748e.chunk.css.map",
@@ -30,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.9bf416c3.css",
-    "static/js/main.8927710e.js"
+    "static/js/main.e74e96e8.js"
   ]
 }
