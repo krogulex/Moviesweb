@@ -56,7 +56,7 @@ const Movie = () => {
       ) : queryMovies.length === 0 ? (
         <h2 className='movies__not-found'>No movies found</h2>
       ) : (
-        <div className=''>
+        <div className='movie__content'>
           <MovieList
             movies={queryMovies}
             from={{ from: `/movie?query=${query}` }}

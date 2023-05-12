@@ -39,3 +39,9 @@
 .movie__div {
   max-width: 1300px;
 }
+.movie__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
